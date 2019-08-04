@@ -7,9 +7,12 @@ import StudentForm from "./components/StudentForm";
 import Modal from "./components/Modal";
 
 class App extends Component {
+  handleClick = () => {
+    console.log("i was clicked!!!!!");
+  };
   render() {
     return (
-      <div className="App">
+      <div className="App" onClick={this.handleClick}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
@@ -19,7 +22,7 @@ class App extends Component {
         </ErrorBoundary>
         <Modal>
           <div className="modal">
-            <h1>Hi from modal window</h1>
+            <button>close</button>
           </div>
         </Modal>
       </div>
